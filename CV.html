@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blakely Beal – CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #f6f3ee;
+      --ink: #1c1b19;
+      --mid: #7a7570;
+      --light: #d0cbc4;
+      --sidebar-width: 200px;
+    }
+
+    html, body { height: 100%; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 16px;
+      line-height: 1.5;
+      display: flex;
+    }
+
+    /* ── LEFT SIDEBAR ── */
+    aside {
+      position: fixed;
+      top: 0; left: 0;
+      width: var(--sidebar-width);
+      height: 100vh;
+      padding: 48px 32px;
+      display: flex;
+      flex-direction: column;
+      z-index: 100;
+      background: var(--cream);
+    }
+
+    .site-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      letter-spacing: 0.01em;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 32px;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+
+    nav a {
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--mid);
+      transition: color 0.2s;
+      display: block;
+    }
+
+    nav a:hover { color: var(--ink); }
+    nav a.active { color: var(--ink); }
+
+    /* ── MAIN CONTENT ── */
+    main {
+      margin-left: var(--sidebar-width);
+      padding: 48px 80px 80px 40px;
+      flex: 1;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+
+    .cv-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+      max-width: 560px;
+      padding-bottom: 200px;
+    }
+
+    .section-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 18px;
+    }
+
+    /* CV sections */
+    .cv-section {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .cv-row {
+      display: flex;
+      gap: 24px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .cv-year {
+      color: var(--mid);
+      flex-shrink: 0;
+      width: 44px;
+    }
+
+    .cv-detail {
+      color: var(--ink);
+    }
+
+    .cv-detail em {
+      font-style: italic;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--light);
+    }
+
+    /* PDF download link */
+    .pdf-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--light);
+      transition: border-color 0.2s;
+    }
+
+    .pdf-link:hover { border-color: var(--ink); }
+    .pdf-link svg { opacity: 0.5; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 700px) {
+      body { flex-direction: column; }
+      aside {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 28px 24px 20px;
+        border-bottom: 1px solid var(--light);
+      }
+      nav { flex-direction: row; flex-wrap: wrap; gap: 8px 20px; }
+      main { margin-left: 0; padding: 32px 24px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- LEFT SIDEBAR -->
+<aside>
+  <span class="site-name">Blakely Beal</span>
+  <nav>
+    <a href="Paintings.html">Paintings</a>
+    <a href="About.html">About</a>
+    <a href="CV.html" class="active">CV</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main>
+  <div class="cv-wrap">
+
+    <!-- EDUCATION -->
+    <div class="cv-section">
+      <div class="section-label">Education</div>
+      <div class="cv-row">
+        <span class="cv-year">2025</span>
+        <span class="cv-detail">Bachelor of Fine Arts, <em>University of Texas</em>, Austin</span>
+      </div>
+      <div class="cv-row">
+        <span class="cv-year">2018</span>
+        <span class="cv-detail">Design and Business Management Program, <em>Parsons School of Design - The New School</em>, Paris</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- GROUP EXHIBITIONS -->
+    <div class="cv-section">
+      <div class="section-label">Group Exhibitions</div>
+      <div class="cv-row">
+        <span class="cv-year">2023</span>
+        <span class="cv-detail"><em>Echoes Throughout the Room</em>, ICOSA Collective, Austin</span>
+      </div>
+      <div class="cv-row">
+        <span class="cv-year">2023</span>
+        <span class="cv-detail"><em>The Almost of What Was</em>, Visual Arts Center, Austin</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- NONPROFIT WORK -->
+    <div class="cv-section">
+      <div class="section-label">Nonprofit Work</div>
+      <div class="cv-row">
+        <span class="cv-year">2022</span>
+        <span class="cv-detail"><em>100% of screenprint sales went to Gray for Glioblastoma, Austin</span>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blakely Beal – Paintings</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #f6f3ee;
+      --ink: #1c1b19;
+      --mid: #7a7570;
+      --light: #d0cbc4;
+      --sidebar-width: 200px;
+    }
+
+    html, body { height: 100%; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 16px;
+      line-height: 1.5;
+      display: flex;
+    }
+
+    aside {
+      position: fixed;
+      top: 0; left: 0;
+      width: var(--sidebar-width);
+      height: 100vh;
+      padding: 48px 32px;
+      display: flex;
+      flex-direction: column;
+      z-index: 100;
+      background: var(--cream);
+    }
+
+    .site-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      letter-spacing: 0.01em;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 32px;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+
+    nav a {
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--mid);
+      transition: color 0.2s;
+      display: block;
+    }
+
+    nav a:hover { color: var(--ink); }
+    nav a.active { color: var(--ink); }
+
+    main {
+      margin-left: var(--sidebar-width);
+      padding: 48px 80px 80px 40px;
+      flex: 1;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+
+    .paintings-list {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+      width: 100%;
+      max-width: 900px;
+      align-self: flex-start;
+      margin-top: 48px;
+      padding-bottom: 200px;
+    }
+
+    .painting {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .painting-image-wrap {
+      width: 100%;
+      background: #e2ddd7;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .painting-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .painting-placeholder {
+      width: 100%;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--mid);
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .painting-placeholder svg { opacity: 0.3; }
+
+    .painting-info { padding-top: 4px; }
+
+    .painting-title {
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+
+    .painting-meta {
+      font-size: 0.88rem;
+      color: var(--mid);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 680px) {
+      body { flex-direction: column; }
+      aside {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 28px 24px 20px;
+        border-bottom: 1px solid var(--light);
+      }
+      main { margin-left: 0; padding: 32px 24px 60px; }
+      nav { flex-direction: row; flex-wrap: wrap; gap: 8px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<aside>
+  <span class="site-name">Blakely Beal</span>
+  <nav>
+    <a href="Paintings.html" class="active">Paintings</a>
+    <a href="About.html">About</a>
+    <a href="CV.html">CV</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
+</aside>
+
+<main>
+  <div class="paintings-list">
+
+    <!-- PAINTING 1 -->
+    <div class="painting">
+      <div class="painting-image-wrap" style="aspect-ratio: 4322/3536;">
+        <img src="high five.jpg" alt="Untitled - WIP" />
+      </div>
+      <div class="painting-info">
+        <div class="painting-title"> Low Five - WIP</div>
+        <div class="painting-meta">
+          2026<br>
+          Oil on canvas<br>
+          40 x 60 in
+        </div>
+      </div>
+    </div>
+
+ <div class="painting">
+      <div class="painting-image-wrap" style="aspect-ratio: 3637 /2300 ;">
+        <img src="boys.jpg" alt="Untitled - WIP" />
+      </div>
+      <div class="painting-info">
+        <div class="painting-title">Friends </div>
+        <div class="painting-meta">
+          2026<br>
+          Oil on canvas<br>
+          7 x 13 in 
+        </div>
+      </div>
+    </div>
+    <!-- PAINTING 2 -->
+    <div class="painting">
+      <div class="painting-image-wrap" style="aspect-ratio: 3749/2898;">
+        <img src="dancing queen .jpg" alt="Untitled - WIP" />
+      </div>
+      <div class="painting-info">
+        <div class="painting-title">Dancing Queen - WIP</div>
+        <div class="painting-meta">
+          2026<br>
+          Oil on canvas<br>
+          40 x 60 in
+        </div>
+      </div>
+    </div>
+
+    <!-- PAINTING 3 -->
+    <div class="painting">
+      <div class="painting-image-wrap" style="aspect-ratio: 3301/2886;">
+        <img src="silver.jpg" alt="Untitled - WIP" />
+      </div>
+      <div class="painting-info">
+        <div class="painting-title">Untitled </div>
+        <div class="painting-meta">
+          2025<br>
+          Oil on linen<br>
+          5 x 7 in 
+        </div>
+      </div>
+    </div>
+
+    <!-- PAINTING 4 -->
+   
+
+    <!-- PAINTING 5 -->
+     <div class="painting">
+      <div class="painting-image-wrap" style="aspect-ratio: 4605/3502 ;">
+        <img src="angels looking in.jpg" alt="Untitled - WIP" />
+      </div>
+      <div class="painting-info">
+        <div class="painting-title"> Angels Looking In</div>
+        <div class="painting-meta">
+          2025<br>
+          Oil on canvas<br>
+         20 x 30 in 
+        </div>
+      </div>
+    </div>
+
+    <!-- PAINTING 6 -->
+    <div class="painting">
+      <div class="painting-image-wrap" style="aspect-ratio: 2368/1782 ;">
+        <img src="girls in blue.jpg" alt="Untitled - WIP" />
+      </div>
+      <div class="painting-info">
+        <div class="painting-title">Untitled </div>
+        <div class="painting-meta">
+          2025<br>
+          Oil on canvas<br>
+          8 x 11 in 
+        </div>
+      </div>
+    </div>
+
+    <!-- PAINTING 7 -->
+   <div class="painting">
+      <div class="painting-image-wrap" style="aspect-ratio: 1617/1340  ;">
+        <img src="birds and girls.jpg" alt="Untitled - WIP" />
+      </div>
+      <div class="painting-info">
+        <div class="painting-title"> Men </div>
+        <div class="painting-meta">
+          2025<br>
+          Oil on canvas<br>
+           7 x 10
+        </div>
+      </div>
+    </div>
+
+   
+
+    <!-- PAINTING 9 -->
+    <div class="painting">
+      <div class="painting-image-wrap" style="aspect-ratio: 1423 /1136 pixels;">
+        <img src="legs and red.jpg" alt="Untitled - WIP" />
+      </div>
+      <div class="painting-info">
+        <div class="painting-title">Untitled</div>
+        <div class="painting-meta">
+          2025<br>
+          Oil on canvas<br>
+          9 x 15 in
+        </div>
+      </div>
+    </div>
+ <!-- PAINTING 8 -->
+     <div class="painting">
+      <div class="painting-image-wrap" style="aspect-ratio: 2186/1727   ;">
+        <img src="dog.jpg" alt="Untitled - WIP" />
+      </div>
+      <div class="painting-info">
+        <div class="painting-title"> Study</div>
+        <div class="painting-meta">
+          2025<br>
+          Oil on canvas<br>
+          8 x 10 in 
+        </div>
+      </div>
+    </div>
+
+<div class="painting">
+      <div class="painting-image-wrap" style="aspect-ratio: 2231 /2915 ;">
+        <img src="mom.jpg" alt="Untitled - WIP" />
+      </div>
+      <div class="painting-info">
+        <div class="painting-title"> Study - Observational Portrait of Mom</div>
+        <div class="painting-meta">
+          2025<br>
+          Oil on canvas<br>
+          9 x 12 in
+        </div>
+      </div>
+    </div>
+
+    <div class="painting">
+      <div class="painting-image-wrap" style="aspect-ratio: 795/1262 ;">
+        <img src="girl in white.jpg" alt="Untitled - WIP" />
+      </div>
+      <div class="painting-info">
+        <div class="painting-title">Study  </div>
+        <div class="painting-meta">
+          2025<br>
+          Oil on linen<br>
+          8 x 12 in 
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</main>
+
+</body>
+</html>

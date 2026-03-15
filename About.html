@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blakely Beal – About</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #f6f3ee;
+      --ink: #1c1b19;
+      --mid: #7a7570;
+      --light: #d0cbc4;
+      --sidebar-width: 200px;
+    }
+
+    html, body { height: 100%; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 16px;
+      line-height: 1.5;
+      display: flex;
+    }
+
+    /* ── LEFT SIDEBAR ── */
+    aside {
+      position: fixed;
+      top: 0; left: 0;
+      width: var(--sidebar-width);
+      height: 100vh;
+      padding: 48px 32px;
+      display: flex;
+      flex-direction: column;
+      z-index: 100;
+      background: var(--cream);
+    }
+
+    .site-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 32px;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+
+    nav a {
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--mid);
+      transition: color 0.2s;
+      display: block;
+    }
+
+    nav a:hover { color: var(--ink); }
+    nav a.active { color: var(--ink); }
+
+    /* ── MAIN CONTENT ── */
+    main {
+      margin-left: var(--sidebar-width);
+      padding: 48px 80px 10px 40px;
+      flex: 1;
+      min-height: 100vh;
+    }
+
+    /* ── ABOUT LAYOUT ── */
+    .about-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 480px;
+      margin: 0 auto;
+      padding-bottom: 200px;
+    }
+
+    /* Photo stacked above bio */
+    .bio-section {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .photo-wrap {
+      width: 100%;
+    }
+
+    .photo-wrap img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Placeholder for photo */
+   /* .photo-placeholder {
+      width: 100%;
+      height: 320px;
+      background: #e2ddd7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--mid);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .photo-placeholder svg { opacity: 0.3; }
+
+    /* Bio text */
+    .bio-text {
+      padding-top: 4px;
+    }
+
+    .section-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 18px;
+    }
+
+    .bio-text p,
+    .statement-text p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--ink);
+      margin-bottom: 1.2em;
+    }
+
+    .bio-text p:last-child,
+    .statement-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Statement section */
+    .statement-section {
+      max-width: 640px;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--light);
+      margin-bottom: 32px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 700px) {
+      body { flex-direction: column; }
+      aside {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 28px 24px 20px;
+        border-bottom: 1px solid var(--light);
+      }
+      nav { flex-direction: row; flex-wrap: wrap; gap: 8px 20px; }
+      main { margin-left: 0; padding: 32px 24px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- LEFT SIDEBAR -->
+<aside>
+  <span class="site-name">Blakely Beal</span>
+  <nav>
+    <a href="Paintings.html">Paintings</a>
+    <a href="About.html" class="active">About</a>
+    <a href="CV.html">CV</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main>
+  <div class="about-wrap">
+
+    <!-- BIO SECTION -->
+    <div class="bio-section">
+
+      <!-- PHOTO -->
+   <!--  div class="photo-wrap">
+        
+          Replace the placeholder below with your photo:
+          <img src="images/your-photo.jpg" alt="Blakely Beal" />
+        -->
+    <!--   <div  class="photo-placeholder">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          
+        </div>
+      </div>
+
+      BIO TEXT -->
+      <div class="bio-text">
+        <div class="section-label">Bio</div>
+        <!--
+          Replace the paragraphs below with your own bio text.
+        -->
+        <p>Blakely Beal is an oil painter known for her distorted, emotional, figurative work. She received a Bachelor of Fine Arts (BFA) at the University of Texas, Austin and completed a Design and Business Management Program at Parsons School of Design, Paris. She has been a part of group exhibitions at institutions that include Icosa Collective, Austin and Visual Arts Center, Austin as well as two house shows in Miami. She lives and works in Miami. </p>
+       
+      </div>
+
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="divider"></div>
+
+    <!-- STATEMENT SECTION -->
+    <div class="statement-section">
+      <div class="section-label">Statement</div>
+      <!--
+        Replace the paragraphs below with your artist statement.
+      -->
+       <div class="statement-text">
+        <p>I am a figurative oil painter engrossed with human interactions — the charged moment of a glance, the weight of unspoken feeling, the way one person's presence can unravel another. My work is rooted in human emotion: love, lust, jealousy, awe, disgust, and everything in between.</p>
+        <p>I have always been someone who is eager to know what others feel. Long before I was a painter, I was an observer — dissecting expressions, reading rooms, noting the strings that connect and divide us. Painting became the easiest way to do that. Every interaction I depict is one I personally relate to, and my hope is that viewers find their own reflection in each piece — that they feel seen, understood, or less alone in what they carry.</p>
+        <p>I work intuitively in oil on canvas, following the painting as it reveals itself. My influences include Chaim Soutine, Edvard Munch, Cecily Brown, and Edward Hopper, painters who dedicated their practice to depicting feelings and interactions. The Bible and my connection to the divine also informs my work, I believe all art is spiritual.</p>
+        <p>My work relates to myself and to contemporary art in that my generation is a sensitive and emotion driven generation. I paint from inside that experience. </p>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>
