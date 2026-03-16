@@ -7,8 +7,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open Paintings.html",
-            "file": "/Users/blakelybeal/Documents/BlakelyBeal.com/Paintings.html"
+            "name": "Open index.html",
+            "file": "/Users/blakelybeal/Documents/BlakelyBeal.com/index.html"
         }
     ]
 }
